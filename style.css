@@ -1,0 +1,212 @@
+body {
+	background-image: url('back.gif');
+}
+.webname {
+	color: #04bd0d;
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 30px;
+	width:auto;
+}
+.webname img {
+	width: 200px;
+	height: 200px;
+}
+.leftLogo {
+	float: left;
+}
+.rightLogo {
+	float: right;
+}
+
+.containerGrid {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 300px auto;
+} 
+.col1 {
+	/*background-color: blue;*/
+	border:3px solid #04bd0d;
+	border-radius: 20px;
+	color: #04bd0d;
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 30px;
+	font-size: 25px;
+}
+
+.col2 {
+	/*background-color: red;*/
+	border:3px solid #04bd0d;
+	border-radius: 20px;
+	padding:30px;
+}
+.col2 h1 {
+	color: #04bd0d;
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif; 
+	
+}
+.flexcontainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+.pstItem {
+	background-color: black;
+	color: #04bd0d;
+	font-size: 20px;
+	margin: 10px;
+	padding: 5px;
+	width: 200px;
+	border-radius: 20px;
+}
+.thumbnail {
+	background-color: green;
+	border-radius: 20px;
+	width: 200px;
+	height: 100px;
+}
+.readmore {
+	float: right;
+	bottom: 0;
+}
+
+/*Navigation bar*/
+nav {
+	margin:0px;
+	padding:0px;
+	font-size:22px;
+	font-weight: bold;
+	font-family:helvetica;
+	margin-left: auto;
+	margin-right: auto;
+	width: 65%;
+
+}
+nav ul {
+	float:left;
+	margin:20px auto;
+	/*border:3px solid green;*/
+	/*background:linear-gradient(#b22222,#8b0000);
+	background:-moz-linear-gradient(#b22222,#8b0000);
+	background:-webkit-linear-gradient(#b22222,#8b0000);*/
+}
+nav ul li {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	float:left;
+	display:inline-block;
+	position:relative;
+} 
+nav ul li a {
+	border-right:3px solid black;
+	padding:13px 25px;
+	color:#04bd0d;
+	font-weight: bold;
+	display:inline-block;
+	background-color: black;
+	/*background:linear-gradient(#04bd0d,#04bd0d);
+	background:-moz-linear-gradient(#04bd0d,#04bd0d);
+	background:-webkit-linear-gradient(#04bd0d,#04bd0d);*/
+}
+nav ul li a:hover {
+	background:linear-gradient(#b22222,#8b0000);
+	background:-moz-linear-gradient(#b22222,#8b0000);
+	background:-webkit-linear-gradient(#b22222,#8b0000);
+}
+nav ul li:hover> ul{
+	visibility:visible;
+}
+nav ul ul {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	visibility:hidden;
+	position:absolute;
+	width:180px;
+	background-color: black;
+	/*border-top:3px solid green;*/
+}
+nav ul ul li a {
+	padding:0px;
+	color:#04bd0d;
+	font-weight: bold;
+	text-decoration:none;
+	display:inline-block;
+	float:left;
+	border: 3px solid black;
+}
+nav ul ul li ul {
+	top:0;
+	left:180px;
+}
+
+@media (max-width: 500px) {
+	.containerGrid {
+		display: flex;
+		flex-wrap: wrap;
+		/*width: 100%;*/
+		grid-template-columns: auto auto;
+	}
+	.col1 {
+		/*background-color: blue;*/
+		border:3px solid #04bd0d;
+		border-radius: 20px;
+		color: #04bd0d;
+		font-family: Helvetica, Arial, sans-serif;
+		padding: 3px;
+		font-size: 18px;
+		text-align: center;
+		width: 100%;
+	}
+
+	.col2 {
+		/*background-color: red;*/
+		border:3px solid #04bd0d;
+		border-radius: 20px;
+		padding:3px;
+		width: 100%;
+	}
+	.pstItem {
+		background-color: black;
+		color: #04bd0d;
+		font-size: 15px;
+		margin: 3px;
+		padding: 3px;
+		width: 200px;
+		border-radius: 20px;
+	}
+	nav ul, nav ul li {
+		/*list-style:none;*/
+		margin:0px;
+		padding:0px;
+		float:none;
+		text-align: center;
+		width:200px;
+		/*display:inline;*/
+		/*position:relative;*/
+	} 
+	nav ul li:hover> ul{
+		visibility:visible;
+	}
+	nav ul ul {
+		list-style:none;
+		margin:0px;
+		padding:0px;
+		visibility:hidden;
+		position:absolute;
+		width:180px;
+		/*border-top:3px solid green;*/
+	}
+	nav ul ul li {
+		padding:0px;
+		color:#04bd0d;
+		font-weight: bold;
+		text-decoration:none;
+		top:-50px;
+		/*display:inline-block;*/
+		left: 200px;
+		float:left;
+		border: 3px solid black;
+	}
+}
